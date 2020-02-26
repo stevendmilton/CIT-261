@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript Code Examples</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>JavaScript Examples</h1>
+  </header>
+  <main>
+    <h2>Loops</h2>
+
+    <p>
+      Loops are used to execute an particular block of code multiple times.
+      The different kinds of loops will determine how many times the iteration
+      will occur and under what condition the iterations will stop.
+    </p>
+    <hr>
+    <h3>for Loops</h3>
+    <p>
+      for loops are used when you know how many times you need to execute a block of code. The syntax for a For loop is as follows:
+    </p>
+    <p>for (statement1; statement2; statement3){} where statement1 initializes the counters; statement2 sets the loop ending condition; statement3 increments the counters</p>
+    <p>
+      var sum = 0;<br>
+      for (i=1; i&lt5; i++) {<br>
+      sum+=i;<br>
+      }<br>
+      This code will execute four times then stop.
+    </p>
+    <hr>
+    <h3>while loops</h3>
+    <p>while loops are used when a block of code must run for an indeterminant number of iterations. A condition is created to allow the user to stop the looping. In a while loop the condition is checked before the loop executes. An example of a while loop follows:
+    </p>
+    <p>
+      while (condition1) {execute block} this will force the code to keep running until condition1 is false. If condition1 is immediately false, the loop will not execute.
+    </p>
+    <p>
+      var prompt = "Y"; <br>
+      var sum = 0;<br>
+      while (prompt = "Y" || prompt = "y") {<br>
+      sum+=1;<br>
+      if (sum == 10) {<br>
+      prompt = "N";<br>
+      }<br>
+      } This loop will execute while the prompt is Y or y. If prompt is any other value, the loop will stop executing and the control will go to the next line.
+    </p>
+    <hr>
+    <h3>Do/While loops</h3>
+    <p>Do/While loops are used similar to While loops when a block of code must run for an indeterminant number of iterations. A condition is created to allow the user to stop the looping. In a do/while loop the condition is checked after the loop executes. An example of a do/while loop follows:
+    </p>
+    <p>
+      do {execute block} while (condition1); this will force the code to keep running until condition1 is false. If condition1 is immediately false, the loop will execute one time.
+    </p>
+    <p>
+      do {<br>execute code here<br>} while (prompt = "Y" || prompt = "y"); This loop will execute once then check the condition and continue executing while the prompt is Y or y. If prompt is any other value, the loop will stop executing and the control will go to the next line.
+    </p>
+    <hr>
+    <hr>
+    <h1>Conditional Statements</h1>
+    <p>
+      Conditional are used when your code needs to make decisions to determine what the next steps should be.
+    </p>
+    <hr>
+    <h2>if Statement</h2>
+    <p>The if statement will execute a block of code if the condition is true.</p>
+    <p>
+      if (name = "Steven") {<br>
+      execute block here;<br>
+      }
+    </p>
+    <hr>
+    <h2>if/else Statement</h2>
+    <p>This variation of the if statement will execute the statements in the if block if true; otherwise it will execute the else block statements.</p>
+    <p>
+      if (name = "Steven") {<br>
+      execute block here;<br>
+      } else {<br>
+      execute block here;<br>
+      }<br>
+    </p>
+    <hr>
+    <h2>else if Statement</h2>
+    <p>This is used when the initial condition is false and you wish to specify another condition to check against before executing the code.</p>
+    <p>
+      if (name = "Steven") {<br>
+      execute block here;<br>
+      } else if (name = "George") {<br>
+      execute block here;<br>
+      }
+    </p>
+    <hr>
+    <h2>switch Statement</h2>
+    <p>The switch statement is used when you have several conditions you need to check for to determine the block of code to run.</p>
+    <p>
+      var name = "Sam";<br>
+      var fname = " ";
+      switch (name) {<br>
+      case "George":<br>
+      fname = name;<br>
+      break;<br>
+      case "Steven":<br>
+      fname = name;<br>
+      break;<br>
+      case "Sam":<br>
+      fname = name;<br>
+      default:<br>
+      fname = name;<br>
+      }
+    </p>
+    <hr>
+    <h1>Functions</h1>
+    <p>
+      Javascript functions are considered subprograms that can be called by
+      both internal and external programs. Functions allow you to re-use code to help simplify your code and use a more object-oriented approach. Functions can be called with or without parameters for the
+      function to work with and will return a value or or undefinde if nothing needs to be returned.
+    </p>
+    <p>
+      In JavaScript, functions are first-class objects, because they can have properties and methods just like any other object. What distinguishes them from other objects is that functions can be called. In brief, they are Function objects.
+    </p>
+    <p>
+      Below is an example of a function that will convert farenheit to
+      celsius accepting the temperature as an argument.<br><br>
+      function convTemp(ftemp) {<br>
+      var celciusTemp = (ftemp - 32) * 5 / 9;<br>
+      return celciusTemp;<br>
+      }
+    </p>
+    <hr>
+    <h1>Arrays</h1>
+    <p>
+      Javascript Arrays are special objects used to store lists of data. Once defined, you are able to access each element of your array, update, add, or remove elements as well as sort elements. You can define your arrays as follows.
+    </p>
+    <p>
+      var fruits = ["Apple","Banana","Strawberry"];<br>
+      or
+      var fruits = new Array()
+    </p>
+    <p>
+      Arrays have several methods associated with them that allow you to work with the arrays.<br>
+      fruits.length; will return the number of elements in the array<br>
+      fruits.sort(); will sort the array in ascending order.<br>
+      fruits.toString(); converts the array to an string of comma-separated array values.<br>
+      fruits.pop(); removes the last item from the array.<br>
+      fruits.push("Orange"); adds the value to the end of the array.<br>
+      fruits.shift(); removes the first element in the array and returns its value.<br>
+      fruits.unshift("Rasberry"); add the value to the top of the array.<br>
+      fruits.splice(2,2,"Pomegranate","Lemon"); inserts or replaces values from the position specificed first for the number of items specified second by the values that follow. It returns the deleted items in an array.
+    </p>
+    <button>Process</button>
+  </main>
+  <script src="script.js"></script>
+</body></html>
