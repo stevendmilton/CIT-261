@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript Objects Code Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>JavaScript Objects</h1>
+  </header>
+  <main>
+    <h2>Object Definition</h2>
+    <p>
+      An object is a collection of related data and/or functionality which
+      usually consist of several variables and functions which are called
+      properties and methods when they are inside the object. Below is an example of a simple JavaScript object.
+    </p>
+    <p>
+      const car = {}; This is all that is needed to create an object. This is an empty object so not much use. Let's make it more interesting.
+    </p>
+    <p>
+      const car = {<br>
+      make: 'Dodge',<br>
+      model: 'Charger',<br>
+      year: '2020',<br>
+      options: ['4wd','spoiler','supercharger'],<br>
+      desc: function() {<br>
+      alert(this.year + ' ' + this.make + ' ' + this.model + ' with options ' + this.options[0] + ', ' + this.options[1] + ', and ' + this.options[2]); <br>
+      }<br>
+      }<br>
+      Now this car has properties and a method to display the car. Next,
+      we will create a constructor function that allows us to create many instances of an Car object.
+    </p>
+    <p>
+      function Car(make, model,year) {
+      this.make = make;
+      this.model = model;
+      this.year = year;
+      this.displayType = function() {
+      alert(this.year + " - " + this.make + " - " + this.model);
+      };
+      }
+    </p>
+    <p>
+      To instantiate the object, use the following syntax:<br><br>
+      var honda = new Car('Honda','Accord','2019');<br><br>
+      You have two different methods of accessing the class properties. You can either use dot notation or you can use bracket notation.<br><br>
+      Dot Notation: <br>
+      alert(car.make); will return the make of the car<br><br>
+      Bracket Notation: <br>
+      alert(car["make"]); will also return the make of the car<br><br>
+      To call the object function, use the following syntax: <br>
+      car1.desc();<br>
+      To call the displayType method, you will just use the object name with the dot and the method, like this:<br>
+      <br>
+      honda.displayType();
+    </p>
+    <p>
+      By pressing the submit button below, we will create a Car function then instantiate three car models then update some properties in each
+      car then display the new car information for each.
+    </p>
+    <button onclick="AddToTable()">Submit</button>
+    <table id="carTable">
+    </table>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
