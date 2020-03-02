@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JSON Code Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>JSON Objects</h1>
+  </header>
+  <main>
+    <h2>JSON Definition</h2>
+    <p>
+      JavaScript Object Notation is an open-standard file format or data interchange format that uses human-readable text to transmit data objects consisting of attribute–value pairs and array data types. It is a very common data format, with a diverse range of applications, such as serving as replacement for XML in AJAX systems. This is important because only text can be transferred between a web browser and a web server. These can be received from the web server and converted into Javascript objects to be manipulated further.
+    </p>
+    <p>
+      You have two methods you can use when working with JSON data. There is parse which will convert the JSON string data to JavaScript objects. Secondly, you have stringify works in the opposite manner. Stringify will take a JavaScript object and convert it to a text string which can then be sent to the web server to be processed. You are not able to pass dates or functions in JSON. Dates should be passed as text then converted in JavaScript to be used as true dates.
+    </p>
+    <h2>Example of a JSON object</h2>
+    <p>
+      var person = {name:"Steven", age:56, employed:false, interests: ["golf","reading", "tennis"]}
+    </p>
+    <p>
+      JSON objects are surrounded by curly braces {}.<br>
+      JSON objects are written in key/value pairs.<br>
+      Keys must be strings, and values must be a valid JSON data type (string, number, object, array, boolean or null).<br>
+      Keys and values are separated by a colon.<br>
+      Each key/value pair is separated by a comma.<br>
+    </p>
+    <p>
+      To convert the JavaScript object to JSON string, I would do the following:<br><br>
+      var personString = JSON.stringify(person);<br><br>
+      To convert the JSON text back to a JSON object, I would do the following:<br><br>
+      var personObject = JSON.parse(personString);<br>
+    </p>
+    <p>
+      By pressing the submit button below, we will create a Car function then instantiate an object and stringify and parse the data then display the car information for each.
+    </p>
+    <button onclick="AddToTable()">Submit</button>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
