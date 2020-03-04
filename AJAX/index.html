@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AJAX Code Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>AJAX</h1>
+  </header>
+  <main>
+    <h2>AJAX Definition</h2>
+    <p>
+      AJAX (Asynchronous JavaScript And XML) is a set of web development techniques using many web technologies on the client side to create asynchronous web applications. With AJAX, web applications can send and retrieve data from a server asynchronously without interfering with the display and behavior of the existing page.
+    </p>
+    <h2>How AJAX Works</h2>
+    <p>
+      1. An event occurs in a web page (the page is loaded, a button is clicked)<br>
+      2. An XMLHttpRequest object is created by JavaScript<br>
+      3. The XMLHttpRequest object sends a request to a web server<br>
+      4. The server processes the request<br>
+      5. The server sends a response back to the web page<br>
+      6. The response is read by JavaScript<br>
+      7. Proper action (like page update) is performed by JavaScript<br>
+    </p>
+    <h2>XMLHttpRequest Object Methods</h2>
+    <p>
+      <b>Method Description</b><br>
+      new XMLHttpRequest() - Creates a new XMLHttpRequest object<br>
+      abort() - Cancels the current request<br>
+      getAllResponseHeaders() - Returns header information<br>
+      getResponseHeader() - Returns specific header information<br>
+      open(method, url, async, user, psw) - Specifies the request<br>
+      method: the request type GET or POST<br>
+      url: the file location<br>
+      async: true (asynchronous) or false (synchronous)<br>
+      user: optional user name<br>
+      psw: optional password<br>
+      send() - Sends the request to the server<br>
+      Used for GET requests<br>
+      send(string) - Sends the request to the server.<br>
+      Used for POST requests<br>
+      setRequestHeader() - Adds a label/value pair to the header to be sent<br>
+    </p>
+    <h2>XMLHttpRequest Object Properties</h2>
+    <p>
+      <b>Property Description</b><br>
+      onreadystatechange - Defines a function to be called when the readyState property changes<br>
+      readyState - Holds the status of the XMLHttpRequest.<br>
+      0: request not initialized<br>
+      1: server connection established<br>
+      2: request received<br>
+      3: processing request<br>
+      4: request finished and response is ready<br>
+      responseText - Returns the response data as a string<br>
+      responseXML - Returns the response data as XML data<br>
+      status - Returns the status-number of a request<br>
+      200: "OK"<br>
+      403: "Forbidden"<br>
+      404: "Not Found"<br>
+      For a complete list go to the Http Messages Reference<br>
+      statusText - Returns the status-text (e.g. "OK" or "Not Found")<br>
+    </p>
+    <p>
+      By pressing the submit button below, we will poll a movie site and display the movies available.
+    </p>
+    <button onclick="AddToTable()">Submit</button>
+    <div id="movies"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
