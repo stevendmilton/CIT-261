@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Local Storage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Local Storage</h1>
+  </header>
+  <main>
+    <h2>Web Storage API</h2>
+    <p>
+      In the past, you had a couple ways you could store data from one page to the next. You could either pass the data in the actual web page call as is done in PHP where the data is pass as tokens in the web address or you could write the data to a cookie that could be accessed from any page. With the advent of HTML5, a specification call Web Storage was created that allows you to create local storage on your client that can be accessed from one page to the next making HTML that much more powerful and useful.
+    </p>
+    <p>
+      There are two types of Web Storage. There is localStorage which keeps the variable and its data indefinitely until destroyed and there is sessionStorage which disappears when the browser session is shutdown. You will have to decide when each type should be used and when it makes sense to keep the data on the client past closing out the session. HTML5 storage is base on named key/value pairs which must be a string. This means you are unable to store dates or functions. Let's look at how to use this storage.
+    </p>
+    <h2>Local Storage Example</h2>
+    <p>
+      localStorage.setItem("person", {name:"Steven", age:56, employed:false, interests: ["golf","reading", "tennis"]});<br>
+      <br>This will create a local variable called person with the JSON information for that person's definition. Once this variable has been stored, we can then retrieve it as follows:<br>
+      <br>var person = localStorage.getItem("person");<br><br>
+      If you want to remove the localStorage item, you would use the method removeItem as follows:<br><br>
+      localStorage.removeItem("person");
+    </p>
+    <p>In the demonstration link below, the javascript on this page will assign a json object to a localStorage variable "person". When the link is clicked, it will open a new page which will then get the localStorage JSON object with a string, number, boolean, and array value which will then be parsed then displayed to the screen.</p>
+    <a href="output.html">See Demo</a>
+    <script>
+      /*localStorage.setItem("name", "Steven");
+localStorage.setItem("age", 56);
+localStorage.setItem("employed", false);
+localStorage.setItem("interests", ["golf", "reading", "tennis"]);*/
+      var person = {
+        name: "Steven",
+        age: 56,
+        employed: false,
+        interests: ["golf", "reading", "tennis"]
+      };
+      localStorage.setItem("person", JSON.stringify(person));
+    </script>
+  </main>
+</body></html>
