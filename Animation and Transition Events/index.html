@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Animating Using CSS Properties with Javascript</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+  <h1>JavaScript CSS Animation/Transition/Transform Demo</h1>
+
+  Click number to animate(Transition/Transform Demonstration):
+
+  <div id="digit">
+    <div id="stripe">0123456789</div><br><br>
+  </div>
+
+  Click train to animate(Transform/Transition Demonstration):
+  <div>
+    <img class="train" src="https://js.cx/clipart/train.gif" onclick="this.style.left='450px'">
+  </div><br><br>
+
+  Click boat to animate(Transform/Transition/Animation Demonstration):
+  <div>
+    <img src="https://js.cx/clipart/boat.png" id="boat">
+  </div><br><br>
+
+  This demonstrates an animation:
+  <div class="progress"></div><br><br>
+
+  Click plane to enlarge(Transition Demonstration):<br>
+  <div>
+    <img id="flyjet" src="https://en.js.cx/clipart/flyjet.jpg">
+  </div><br><br>
+
+  Click Circle for a growing circle animation(Transition, Transform, Animation Demonstration):<br><br>
+  <button onclick="showCircle(150, 150, 100)">showCircle(150, 150, 100)</button>
+  <script src="script.js"></script>
+</body>
+
+</html>
