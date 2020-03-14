@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript Events</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>JavaScript Events</h1>
+  </header>
+  <main>
+    <p>
+      An JavaScript event are things that happen to HTML elements. As these specific events occur, JavaScript can then run to perform whatever action you want to see. Below is an example of a simple JavaScript event. Click on the button to see it change. This is called a onclick event
+    </p>
+    <button id="pid" onclick="Pupdate()">Click</button>
+    <p>There are other events you can do as well. This next example demonstrates a mouse over event. Move your mouse over the image to see it expand.</p>
+    <img onmouseover="Expand()" src="https://js.cx/clipart/boat.png" id="boat">
+    <p>Another event I want to demonstrate is the keypress event which occurs whenever a normal key is pressed.</p>
+    <input id="keypress" type="text" onkeypress="Keypress()">
+    <p>Here we will embed a HTML5 video using an onprogress event to let the viewer know the video is still downloading</p>
+    <video id="video" controls onprogress="Progress()">
+      <source src="2019-10-0210-the-nephites-flee-into-the-wilderness-2-nephi-417-30-52-6-360p-eng.mp4" type="video/mp4">
+      Your browser is unable to play HTML5 video.
+    </video>
+    <p>video provided by the Church of Jesus Christ of Latterday-Saints. www.churchofjesuschrist.org</p>
+    <p id="progmsg"></p>
+    <p>This is an example of how to use the audio player.</p>
+    <audio controls>
+      <source src="508881__erokia__dark-downtempo-piano-loop-msfxp6-24-11-130-65-bpm.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+    <p>Lastly, we will do a quick demonstration of Canvas. Just mouse over the box to see the results.</p>
+    <canvas onmouseover="Graph()" id="myCanvas" width="200" height="100"></canvas>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
