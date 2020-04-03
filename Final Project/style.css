@@ -1,0 +1,224 @@
+body {
+    font-size: 1.2em;
+    width: 100%;
+    margin: 0 auto;
+    letter-spacing: 0.5px;
+    background-image: url(parchment-background-3390.jpeg);
+    background-repeat: repeat;
+}
+
+main {
+    padding: 10px;
+}
+
+h1,
+h2,
+h3 {
+    padding-left: 10px;
+    text-align: center;
+}
+
+h1 {
+    transform: skew(-10deg);
+}
+
+h2 {
+    transform: skew(10deg);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.bom {
+    width: 200px;
+    animate
+}
+
+.bom1 {
+    width: 200px;
+}
+
+p {
+    padding: 5px;
+    background-color: antiquewhite;
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 78%;
+    margin: auto;
+}
+
+#bheading {
+    border: 4px solid gray;
+    background-color: azure;
+    border-radius: 10px;
+    margin: 0 5em;
+    padding: 10px;
+}
+
+button {
+    text-align: center;
+    margin: 0 auto;
+    width: 60px;
+}
+
+#container {
+    padding: 1.5em;
+    background: linear-gradient(-45deg, rgb(245, 156, 127), rgb(241, 89, 38));
+    border-radius: 10px;
+}
+
+.verse {
+    line-height: 1em;
+    text-align: left;
+}
+
+.drop_menu {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    list-style-type: none;
+    height: 30px;
+    display: block;
+}
+
+.drop_menu li {
+    background-color: #005555;
+    float: left;
+}
+
+.drop_menu li a {
+    padding: 9px 20px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font: 12px arial, verdana, sans-serif;
+}
+
+/* Submenu */
+.drop_menu ul {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    list-style-type: none;
+}
+
+.drop_menu ul:hover {
+    max-height: 32px;
+}
+
+.drop_menu li:hover {
+    position: relative;
+    background: #5FD367;
+}
+
+.drop_menu li:hover ul {
+    left: 0px;
+    top: 30px;
+    background: #5FD367;
+    padding: 0px;
+}
+
+.drop_menu li:hover ul li a {
+    padding: 5px;
+    display: block;
+    width: 132px;
+    text-indent: 15px;
+    background-color: #5FD367;
+    transition: font-size 1s, text-shadow 1s;
+    font-size: 1em;
+    text-shadow: 3px 3px #666;
+}
+
+.drop_menu li:hover ul li a:hover {
+    background: #005555;
+}
+
+hr {
+    border-top-width: 3px;
+}
+
+header {
+    text-align: right;
+}
+
+#videobtn {
+    background: url(video-sml.jpg);
+    height: 20px;
+    width: 20px;
+}
+
+.attrib {
+    font-size: .5em;
+}
+
+#boat {
+    margin-left: 0;
+    cursor: pointer;
+    transition: margin-left 6s ease-in-out;
+}
+
+/* flipping the picture with CSS */
+.back {
+    transform: scaleX(-1);
+    filter: fliph;
+}
+
+.bom {
+    animation: spin-back-and-forth 4s infinite;
+}
+
+@keyframes spin-back-and-forth {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    33% {
+        transform: rotate(33deg);
+    }
+
+    67% {
+        transform: rotate(-33deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.bom1 {
+    animation: shrink-and-expand 8s infinite;
+}
+
+@keyframes shrink-and-expand {
+    0% {
+        transform: scale(0, 0);
+    }
+
+    50% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(0, 0);
+    }
+}
+
+@media(min-width: 1190px) {
+    .drop_menu {
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
+        list-style-type: none;
+        height: 30px;
+        display: block;
+        width: 1190px;
+    }
+}
