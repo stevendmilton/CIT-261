@@ -36,12 +36,6 @@ h2 {
     justify-content: space-between;
 }
 
-
-.bom,
-.bom1 {
-    width: 200px;
-}
-
 p {
     padding: 5px;
     background-color: antiquewhite;
@@ -168,6 +162,7 @@ header {
 }
 
 .bom {
+    width: 200px;
     animation: spin-back-and-forth 4s infinite;
 }
 
@@ -191,6 +186,7 @@ header {
 
 .bom1 {
     animation: shrink-and-expand 8s infinite;
+    width: 200px;
 }
 
 @keyframes shrink-and-expand {
