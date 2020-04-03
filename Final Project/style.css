@@ -30,18 +30,14 @@ h2 {
     display: flex;
     align-items: center;
     margin: 0;
-    padding: 0;
+    padding: ;
     text-align: center;
     width: 100%;
     justify-content: space-between;
 }
 
 
-.bom {
-    width: 200px;
-    animate
-}
-
+.bom,
 .bom1 {
     width: 200px;
 }
@@ -52,7 +48,7 @@ p {
     border: 2px solid gray;
     border-radius: 10px;
     width: 78%;
-    margin: auto;
+    margin: 5px auto;
 }
 
 #bheading {
